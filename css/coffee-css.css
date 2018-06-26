@@ -19,10 +19,30 @@ td, th {
 .coffeeName {
     text-align: right;
 }
-.topSubmit {
-    text-align: right;
+/*.topSubmit {*/
+    /*text-align: right;*/
+/*}*/
+
+.topSubmit2 {
+    max-width: 400px;
+    max-width: 100%;
 }
 
 .coffeeInputs {
     text-align: right;
+}
+
+.container-right {
+    margin-right: 45px;
+    margin-left: 45px;
+    padding: 10px;
+}
+
+.search2 {
+    max-width: 400px;
+    width: 100%;
+}
+
+.coffeeSubHeader {
+    text-align: center;
 }
