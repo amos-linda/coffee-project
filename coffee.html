@@ -3,36 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" href="coffee-css.css">
+    <link rel="stylesheet" href="css/coffee-css.css">
 </head>
 <body>
-<!--<script src="coffee-js.js"></script>-->
+<script src="js/coffee-js.js"></script>
 
 <h1 class="bigName">Coffee!</h1>
 <div class="topForm">
+        <h4>Roast</h4>
     <form>
         <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
+            <select id="roast-selection">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
     </form>
 </div>
 
-<div class="topButton">
+<div class="coffeeInputs">
     <table>
         <thead>
-        <tr>
-            <th>ID</th>
-            <th>NAME</th>
-            <th>ROAST</th>
-        </tr>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>ROAST</th>
+            </tr>
         </thead>
-        <tbody id="coffees"></tbody>
+        <tbody id="coffee">
+<div class="coffeeName">
+        <h4>Coffee Name</h4>
+        <input type="text" name="coffeeNames">
+    </div>
+    <div>
+         <input id="submit" type="submit" />
+    </div>
+        </tbody>
     </table>
 </div>
 
 </body>
 </html>
+
+
+
+
