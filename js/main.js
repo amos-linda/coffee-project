@@ -1,14 +1,16 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class="coffee">';
+    html += '<p>' + coffee.id + '</p>';
+    html += '<p>' + coffee.name + '</p>';
+    html += '<p>' + coffee.roast + '</p>';
+    html += '</div>';
 
     return html;
 }
+// ^^^ tr changed to div and td changed to p tags
+
 
 function renderCoffees(coffees) {
     var html = '';
@@ -48,13 +50,18 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+// ^^ here are the id nubmers that we have to hide
+
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
 tbody.innerHTML = renderCoffees(coffees);
+// ^^^I've tried to change tbody to div or to the class coffees but it just breaks the table.'
 
 submitButton.addEventListener('click', updateCoffees);
+
+
 
 
 

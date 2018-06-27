@@ -3,85 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Coffee</title>
-    <link rel="stylesheet" href="css/coffee-css.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+<h1>Coffee!</h1>
 
-<h1 class="bigName">Coffee!</h1>
-
-<div class="container-right col-lg-6">
-
-<div class="topForm">
-        <h4>Roast</h4>
-    <form>
-        <label for="roast-selection"></label>
-            <select id="roast-selection">
-                <option>light</option>
-                <option>medium</option>
-                <option>dark</option>
-            </select>
-    </form>
-</div>
+<form>
+    <label for="roast-selection"></label>
+    <select id="roast-selection">
+        <option>light</option>
+        <option>medium</option>
+        <option>dark</option>
+    </select>
+    <input id="submit" type="submit" />
+</form>
 
 
-<!--<table>-->
-        <!--<thead>-->
-            <!--<tr>-->
-                <!--<th>ID</th>-->
-                <!--<th>NAME</th>-->
-                <!--<th>ROAST</th>-->
-            <!--</tr>-->
-        <!--</thead>-->
-<!--</table>-->
 
-    <div class="coffeeInputs col-lg-12">
-            <tbody id="coffee">
-
-                <div class="coffeeName">
-                    <h4>Coffee Name</h4>
-                    <input type="text" name="coffeeNames">
-                </div>
-
-                <div class="topSubmit">
-                    <input id="submit" type="submit" />
-                </div>
-            </tbody>
+<table>
+    <div>
+        <p>
+            <p>ID</p>
+            <p>NAME</p>
+            <p>ROAST</p>
+        </p>
+        <!--^^ td changed to p tags-->
     </div>
+    <!--^^ tr changed to divs-->
+    <tbody id="coffees"></tbody>
+    <!--^^^the tbody can't be changed to a div. it breaks the table contents-->
+</table>
+<!--^^^table tag can't be changed to div-->
 
 
-    <div class="coffeeInputs">
-
-<div class="topForm">
-        <h2 class = "coffeeSubHeader col-lg-12">Add a Coffee</h2>
-    <h4>Roast</h4>
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection2">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-    </form>
-</div>
-
-        <tbody id="coffee2">
-
-            <div class="coffeeName2">
-                <h4>Name</h4>
-                <input class="search2" type="text" name="coffeeNames">
-            </div>
-
-            <div class="topSubmit2">
-                <input id="submit2" type="submit" />
-            </div>
-        </tbody>
-    </div>
-
-</div>
-
-<div class="container-left col-lg-6">
-</div>
-
-<!--<script src="js/coffee-js.js"></script>-->
+<script src="js/main.js"></script>
 </body>
 </html>
+                <!--^^need to figure out how to hide the id's on the table. we can't delete them since we'll need them later^^-->
