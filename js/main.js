@@ -14,7 +14,7 @@ var coffees = [
     {id: 11, name: 'Espresso', roast: 'dark'},
     {id: 12, name: 'Viennese', roast: 'dark'},
     {id: 13, name: 'Italian', roast: 'dark'},
-    {id: 14, name: 'French', roast: 'dark'}
+    {id: 14, name: 'French', roast: 'dark'},
 ];
 
 
@@ -45,10 +45,13 @@ function renderCoffees(coffees) {
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
+    var matchFound = match.value;
     // get the value of the look4match
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast && ????) { // add filtering for the value of the text input
+        // if (coffee.roast === selectedRoast) { // add filtering for the value of the text input
+        //     filteredCoffees.push(coffee);
+        if (coffee.roast === selectedRoast && coffee.name === matchFound) { // add filtering for the value of the text input
             filteredCoffees.push(coffee);
         }
     });
@@ -56,11 +59,12 @@ function updateCoffees(e) {
 }
 
 
-// ^^ here are the id nubmers that we have to hide
+// ^^ here are the id numbers that we have to hide
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+var match = document.querySelector('#look4match');
 // add look4match id in the dom and store in a variable
 
 tbody.innerHTML = renderCoffees(coffees);
