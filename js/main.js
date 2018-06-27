@@ -14,10 +14,12 @@ var coffees = [
     {id: 11, name: 'Espresso', roast: 'dark'},
     {id: 12, name: 'Viennese', roast: 'dark'},
     {id: 13, name: 'Italian', roast: 'dark'},
-    {id: 14, name: 'French', roast: 'dark'},
+    {id: 14, name: 'French', roast: 'dark'}
 ];
 
-var ascendingCoffees = coffees.reverse();
+
+
+coffees.reverse();
 
 
 function renderCoffee(coffee) {
@@ -34,7 +36,7 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = ascendingCoffees.length - 1; i >= 0; i--) {
+    for(var i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -43,9 +45,10 @@ function renderCoffees(coffees) {
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
+    // get the value of the look4match
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        if (coffee.roast === selectedRoast && ????) { // add filtering for the value of the text input
             filteredCoffees.push(coffee);
         }
     });
@@ -58,11 +61,12 @@ function updateCoffees(e) {
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+// add look4match id in the dom and store in a variable
 
 tbody.innerHTML = renderCoffees(coffees);
 // ^^^I've tried to change tbody to div or to the class coffees but it just breaks the table.'
 
-document.getElementById('look4match').addEventListener('input', updateCoffees());
+// document.getElementById('look4match').addEventListener('input', updateCoffees());
 
 
 submitButton.addEventListener('click', updateCoffees);
