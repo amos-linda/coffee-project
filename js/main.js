@@ -49,15 +49,15 @@ function updateCoffees(e) {
     // get the value of the look4match
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        // if (coffee.roast === selectedRoast) { // add filtering for the value of the text input
-        //     filteredCoffees.push(coffee);
-        if (coffee.roast === selectedRoast && coffee.name === matchFound) { // add filtering for the value of the text input
+        if (coffee.roast === selectedRoast && matchFound === '') { // add filtering for the value of the drop down
             filteredCoffees.push(coffee);
+        } else if (coffee.roast === selectedRoast && coffee.name === matchFound) { // add filtering for the value of the text input
+            filteredCoffees.push(coffee);
+            // console.log("test");
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
-
 
 // ^^ here are the id numbers that we have to hide
 
@@ -74,7 +74,8 @@ tbody.innerHTML = renderCoffees(coffees);
 
 
 submitButton.addEventListener('click', updateCoffees);
-
+roastSelection.addEventListener('click', updateCoffees);
+match.addEventListener('input', updateCoffees);
 
 
 
