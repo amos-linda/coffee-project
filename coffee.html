@@ -3,41 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>Coffee</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 <h1>Coffee!</h1>
 
-<form>
-    <label for="roast-selection"></label>
+<form class="inputFields">
+    <label for="roast-selection">Roast</label><br>
     <select id="roast-selection">
         <option>light</option>
         <option>medium</option>
         <option>dark</option>
-    </select>
-    <input id="submit" type="submit" />
+    </select><br>
+    <input type="text"><br>
 </form>
+    <input id="submit" type="submit">
 
 
 
 <table>
-    <div>
-        <p>
-            <p>ID</p>
-            <p>NAME</p>
-            <p>ROAST</p>
-        </p>
+
+
+            <p></p>
+            <p></p>
+            <p></p>
+
         <!--^^ td changed to p tags-->
-    </div>
+
     <!--^^ tr changed to divs-->
     <tbody id="coffees"></tbody>
     <!--^^^the tbody can't be changed to a div. it breaks the table contents-->
 </table>
 <!--^^^table tag can't be changed to div-->
-
-
 <script src="js/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
 </body>
 </html>
                 <!--^^need to figure out how to hide the id's on the table. we can't delete them since we'll need them later^^-->

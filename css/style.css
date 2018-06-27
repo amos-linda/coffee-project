@@ -1,3 +1,7 @@
+form {
+    margin-right: 0;
+}
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -13,3 +17,17 @@ td, th {
 }
 
 /*^^^we need to hide the id numbers on the table so we can use them later. I THINK display-none will work, but I can't think of what I should be targeting. I've tried using coffee.id (which does nothing)and a div tag, a p tag and a class of coffee (.coffee) break the table. The table contents are in the JavaScript so we can't really assign it an id or a class...*/
+
+h1 {
+    text-align: center;
+}
+
+.inputFields {
+    text-align: right;
+    width: 400px;
+}
+
+#submit {
+    text-align: right;
+    width: 400px;
+}
